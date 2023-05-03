@@ -3,7 +3,7 @@
 # Set variables
 img_name=pandas_header
 aws_region=us-west-2
-aws_account_id=401913772240
+aws_account_id=<account>
 
 #Update and build docker image
 docker build -t $img_name .

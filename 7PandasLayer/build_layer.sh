@@ -14,5 +14,3 @@ include/**
 bin/**
 EOF
 
-cp *.py layer/python/.
-cp google_credentials_n.json layer/python/.
