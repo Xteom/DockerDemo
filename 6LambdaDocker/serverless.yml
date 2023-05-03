@@ -1,0 +1,28 @@
+#####################
+#                   #
+#     SERVERLESS    #
+#                   #
+#####################
+
+# service name
+service: csv-headers
+
+# configuration
+provider:
+  name: aws
+  runtime: python3.7
+  iam:
+    role: arn:aws:iam::<account>:role/<role-name>
+  memorySize: 3000
+  stage: dev
+  region: us-west-2
+  deploymentBucket:
+    name: dive-serverless-deployments
+
+# functions
+functions:
+  read-headers:
+    timeout: 30
+    image:
+      uri: <account>.dkr.ecr.us-west-2.amazonaws.com/<repo-name>:latest
+      command: handler.handler
