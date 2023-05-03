@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  tesseract-ocr:
+    image: tesseract-ocr:latest
+    ports:
+      - "7780:7780"
+    volumes:
+      - ./test_images:/app/test_images
