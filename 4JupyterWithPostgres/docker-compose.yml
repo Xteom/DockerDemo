@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  jupyter:
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+
+  postgres:
+    image: postgres:13.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydb
