@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM python:3.8-slim
 
 RUN apt update
 
@@ -6,8 +6,8 @@ RUN apt install tesseract-ocr -y
 
 COPY requirements.txt .
 
-COPY app.py .
-
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "gradio", "app.py" "--port", "7780"]
+COPY app.py .
+
+ENTRYPOINT [ "gradio", "app.py" ]

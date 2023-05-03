@@ -22,4 +22,4 @@ gr.Interface(
     article=article, # Longer description of the app (informative)
     examples=examples, # Sample inputs (informative)
     allow_flagging=False, # Allow users to save inputs and outputs for later debugging/review
-).launch()
+).launch(server_name="0.0.0.0", server_port=7780)
