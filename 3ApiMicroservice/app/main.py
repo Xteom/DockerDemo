@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api_models import PredictionRequest, PredictionResponse
+from app.api_models import PredictionRequest, PredictionResponse
 
 app = FastAPI()
 
