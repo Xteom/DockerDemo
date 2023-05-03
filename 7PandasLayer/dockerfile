@@ -1,0 +1,8 @@
+FROM lambci/lambda:build-python3.8
+
+WORKDIR /var/task
+
+COPY requirements.txt /var/task/requirements.txt
+
+RUN pip install --no-cache-dir -t /opt/python/lib/python3.8/site-packages/ -r requirements.txt
+

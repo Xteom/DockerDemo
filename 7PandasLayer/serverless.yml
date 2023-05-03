@@ -1,0 +1,14 @@
+service: pandas-layer
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: us-west-2
+  deploymentBucket:
+    name: <nombre-bucket>
+
+layers:
+  layer:
+    path: layer
+    compatibleRuntimes:
+      - python3.8

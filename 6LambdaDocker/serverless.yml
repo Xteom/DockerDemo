@@ -17,7 +17,7 @@ provider:
   stage: dev
   region: us-west-2
   deploymentBucket:
-    name: dive-serverless-deployments
+    name: <bucket-name>
 
 # functions
 functions:
