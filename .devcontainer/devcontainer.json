@@ -4,6 +4,17 @@
 	"name": "Docker in Docker",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"github.copilot",
+			"github.copilot-chat",
+			"ms-azuretools.vscode-docker"
+		  ]
+		}
+	  },
 
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
